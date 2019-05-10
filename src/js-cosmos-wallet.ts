@@ -42,7 +42,7 @@
     const message = CryptoJS.enc.Hex.parse(publicKey.toString(`hex`))
     const hash = ripemd160(sha256(message)).toString()
     const address = Buffer.from(hash, `hex`)
-    const cosmosAddress = bech32ify(address, `cosmos`)
+    const cosmosAddress = bech32ify(address, `bitsong`)
   
     return cosmosAddress
   }
